@@ -1,0 +1,17 @@
+{% extends 'client.html' %}
+
+{% block head %}
+<title>Add Client</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+</div>
+
+{% endblock %}
